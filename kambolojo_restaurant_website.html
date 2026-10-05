@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kambolojo Restaurant | Addis Ababa, Ethiopia</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            kambo: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c', // Primary Warm Terracotta / Orange
+              700: '#c2410c',
+              800: '#9a3412',
+              900: '#7c2d12',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-amber-50/40 text-slate-800 font-sans flex flex-col min-h-screen">
+
+  <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-amber-200/60 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-kambo-600 to-amber-600 text-white flex items-center justify-center font-black text-2xl shadow-md shadow-kambo-600/30 group-hover:scale-105 transition">
+          K
+        </div>
+        <div>
+          <span class="text-2xl font-black tracking-tight text-slate-900 block leading-none">KAMBOLOJO</span>
+          <span class="text-xs font-bold tracking-widest text-kambo-600 uppercase">Restaurant • Addis Ababa</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 font-semibold text-slate-700">
+        <a href="#menu" class="hover:text-kambo-600 transition flex items-center gap-2"><i class="fa-solid fa-utensils text-kambo-600"></i> Menu</a>
+        <a href="#branches" class="hover:text-kambo-600 transition flex items-center gap-2"><i class="fa-solid fa-location-dot text-kambo-600"></i> Branches & Hours</a>
+        <a href="#reviews" class="hover:text-kambo-600 transition flex items-center gap-2"><i class="fa-solid fa-star text-amber-500"></i> Reviews</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="tel:0919902808" class="bg-kambo-600 text-white px-4 sm:px-5 py-2.5 rounded-xl font-bold hover:bg-kambo-700 transition shadow-lg shadow-kambo-600/20 flex items-center gap-2 text-sm sm:text-base">
+          <i class="fa-solid fa-phone"></i> <span>0919902808</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-kambo-950 text-white py-16 sm:py-24 overflow-hidden">
+    <div class="absolute -top-20 -right-20 w-96 h-96 bg-kambo-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-6 text-center lg:text-left">
+        
+        <!-- Status Badge -->
+        <div class="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-400/30 px-4 py-1.5 rounded-full text-amber-300 text-xs sm:text-sm font-semibold tracking-wide">
+          <i class="fa-solid fa-clock text-amber-400"></i> Open Daily in Addis Ababa until 10:30 PM
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+          Welcome to <span class="text-amber-400 underline decoration-kambo-500 decoration-wavy decoration-2">Kambolojo</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+          Experience authentic flavor with our oven-baked pizzas, juicy burgers, loaded club sandwiches, full main dishes, pure fresh fruit juices, and cold drinks across Addis Ababa!
+        </p>
+
+        <!-- Branch Badges -->
+        <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-3">
+          <span class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 flex items-center gap-2 text-amber-200">
+            <i class="fa-solid fa-shop text-kambo-500"></i> Bole Arabsa Branch
+          </span>
+          <span class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold border border-white/10 flex items-center gap-2 text-amber-200">
+            <i class="fa-solid fa-shop text-kambo-500"></i> Cherkos Square Branch
+          </span>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <a href="#menu" class="bg-kambo-600 hover:bg-kambo-500 text-white font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-kambo-600/30 flex items-center justify-center gap-2 text-lg">
+            <i class="fa-solid fa-utensils"></i> Explore Full Menu
+          </a>
+          <a href="https://wa.me/251919902808" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-4 rounded-xl transition shadow-xl flex items-center justify-center gap-2 text-lg">
+            <i class="fa-brands fa-whatsapp text-xl"></i> Order via WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual -->
+      <div class="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 aspect-4/3 sm:aspect-video lg:aspect-4/3">
+          <img 
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80" 
+            alt="Kambolojo Special Feast" 
+            class="w-full h-full object-cover transform hover:scale-105 transition duration-700"
+            onerror="this.src='https://placehold.co/800x600/ea580c/ffffff?text=Kambolojo+Restaurant+Addis'"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+            <div class="text-white">
+              <span class="bg-kambo-600 font-bold text-xs uppercase px-2.5 py-1 rounded-md">House Favorite</span>
+              <h3 class="text-2xl font-bold mt-1">Kambolojo Special Pizza</h3>
+              <p class="text-xs sm:text-sm text-slate-300">Oven-roasted beef, chicken, mozzarella, peppers & garlic house sauce</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-kambo-600 font-bold uppercase tracking-widest text-xs sm:text-sm">Oven Fresh & Delicious</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Kambolojo Complete Menu</h2>
+      <p class="text-slate-600 mt-2 text-sm sm:text-base">
+        Select a category below or search for your favorite meal, juice, or soft drink.
+      </p>
+
+      <!-- Search Input -->
+      <div class="mt-6 relative max-w-md mx-auto">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search pizza, burger, spris, Fanta Ananas..." 
+          class="w-full pl-11 pr-4 py-3.5 rounded-2xl border border-amber-200 focus:outline-none focus:ring-2 focus:ring-kambo-600 focus:border-transparent bg-white shadow-sm transition text-slate-800"
+        >
+      </div>
+    </div>
+
+    <!-- Category Filter Buttons -->
+    <div class="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto pb-4 mb-10 hide-scrollbar">
+      <button onclick="filterCategory('all')" class="cat-btn active bg-kambo-600 text-white font-bold px-5 py-2.5 rounded-full text-sm whitespace-nowrap shadow-md transition flex items-center gap-2">
+        <i class="fa-solid fa-border-all"></i> All Items
+      </button>
+      <button onclick="filterCategory('pizza')" class="cat-btn bg-white hover:bg-amber-100/50 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm border border-amber-200 whitespace-nowrap transition flex items-center gap-2">
+        <i class="fa-solid fa-pizza-slice text-kambo-600"></i> Pizzas
+      </button>
+      <button onclick="filterCategory('burgers')" class="cat-btn bg-white hover:bg-amber-100/50 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm border border-amber-200 whitespace-nowrap transition flex items-center gap-2">
+        <i class="fa-solid fa-burger text-kambo-600"></i> Burgers & Sandwiches
+      </button>
+      <button onclick="filterCategory('mains')" class="cat-btn bg-white hover:bg-amber-100/50 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm border border-amber-200 whitespace-nowrap transition flex items-center gap-2">
+        <i class="fa-solid fa-utensils text-kambo-600"></i> Main Dishes
+      </button>
+      <button onclick="filterCategory('juices')" class="cat-btn bg-white hover:bg-amber-100/50 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm border border-amber-200 whitespace-nowrap transition flex items-center gap-2">
+        <i class="fa-solid fa-glass-water text-kambo-600"></i> Fresh Juices & Spris
+      </button>
+      <button onclick="filterCategory('softdrinks')" class="cat-btn bg-white hover:bg-amber-100/50 text-slate-700 font-semibold px-5 py-2.5 rounded-full text-sm border border-amber-200 whitespace-nowrap transition flex items-center gap-2">
+        <i class="fa-solid fa-bottle-water text-kambo-600"></i> Soft Drinks & Water
+      </button>
+    </div>
+
+    <!-- Menu Grid (EVERY ITEM PICTURE IS BEFORE/ABOVE THE NAME, NO PRICES LISTED) -->
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Dynamic menu items injected here -->
+    </div>
+
+    <!-- Empty search state -->
+    <div id="no-results" class="hidden text-center py-12">
+      <i class="fa-solid fa-magnifying-glass text-4xl text-amber-300 mb-3"></i>
+      <p class="text-slate-500 font-medium">No matching menu items found. Try searching for something else!</p>
+    </div>
+  </section>
+
+  <section id="branches" class="bg-slate-900 text-white py-16 sm:py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-400 font-bold uppercase tracking-wider text-xs sm:text-sm">Locations & Contact</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Visit Kambolojo Branches</h2>
+        <p class="text-slate-300 mt-2 text-sm sm:text-base">
+          Proudly serving fresh food across Addis Ababa, Ethiopia.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        
+        <!-- Branch 1: Bole Arabsa -->
+        <div class="bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 bg-kambo-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-shop"></i>
+              </div>
+              <span class="bg-amber-400/10 text-amber-300 border border-amber-400/20 text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fa-solid fa-clock"></i> Closes 10:30 PM
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-bold">Bole Arabsa Branch</h3>
+            <p class="text-slate-400 text-sm mt-1">Bole Subcity, Addis Ababa, Ethiopia</p>
+            
+            <div class="mt-6 pt-6 border-t border-slate-700/80 space-y-3 text-sm text-slate-300">
+              <p class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-kambo-500"></i>
+                <a href="tel:0919902808" class="hover:underline font-bold text-white">0919902808</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <i class="fa-solid fa-clock text-amber-400"></i>
+                <span>Open Daily: Morning until 10:30 PM</span>
+              </p>
+              <p class="flex items-center gap-3">
+                <i class="fa-solid fa-utensils text-emerald-400"></i>
+                <span>Dine-in, Takeaway & Quick Delivery</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex gap-3">
+            <a href="tel:0919902808" class="flex-1 bg-kambo-600 hover:bg-kambo-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i class="fa-solid fa-phone"></i> Call Branch
+            </a>
+            <a href="https://wa.me/251919902808" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Branch 2: Cherkos Square -->
+        <div class="bg-slate-800/90 border border-slate-700 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 bg-kambo-600 text-white rounded-2xl flex items-center justify-center text-xl font-bold">
+                <i class="fa-solid fa-shop"></i>
+              </div>
+              <span class="bg-amber-400/10 text-amber-300 border border-amber-400/20 text-xs font-semibold px-3 py-1 rounded-full">
+                <i class="fa-solid fa-clock"></i> Closes 10:30 PM
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-bold">Cherkos Square Branch</h3>
+            <p class="text-slate-400 text-sm mt-1">Kirkos Subcity, Addis Ababa, Ethiopia</p>
+            
+            <div class="mt-6 pt-6 border-t border-slate-700/80 space-y-3 text-sm text-slate-300">
+              <p class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-kambo-500"></i>
+                <a href="tel:0919902808" class="hover:underline font-bold text-white">0919902808</a>
+              </p>
+              <p class="flex items-center gap-3">
+                <i class="fa-solid fa-clock text-amber-400"></i>
+                <span>Open Daily: Morning until 10:30 PM</span>
+              </p>
+              <p class="flex items-center gap-3">
+                <i class="fa-solid fa-utensils text-emerald-400"></i>
+                <span>Dine-in, Takeaway & Quick Delivery</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex gap-3">
+            <a href="tel:0919902808" class="flex-1 bg-kambo-600 hover:bg-kambo-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i class="fa-solid fa-phone"></i> Call Branch
+            </a>
+            <a href="https://wa.me/251919902808" target="_blank" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition flex items-center justify-center gap-2 text-sm">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-kambo-600 font-bold uppercase tracking-wider text-xs sm:text-sm">Customer Feedback</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Ratings & Customer Reviews</h2>
+      <p class="text-slate-600 mt-2 text-sm sm:text-base">
+        Read reviews from diners across Addis Ababa or submit your feedback!
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- Summary Rating Card -->
+      <div class="lg:col-span-4 bg-white p-6 sm:p-8 rounded-3xl border border-amber-200/80 shadow-sm">
+        <div class="text-center pb-6 border-b border-slate-100">
+          <div class="text-5xl font-black text-slate-900" id="avg-score">4.9</div>
+          <div class="flex justify-center text-amber-400 gap-1 my-2 text-lg">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-500 text-sm font-medium">Based on <span id="total-reviews-count">5</span> customer reviews</p>
+        </div>
+
+        <!-- Rating Breakdown Bars -->
+        <div class="space-y-3 pt-6">
+          <div class="flex items-center gap-3 text-xs sm:text-sm">
+            <span class="w-12 font-semibold text-slate-700">5 Stars</span>
+            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-amber-400 h-full w-[85%] rounded-full"></div>
+            </div>
+            <span class="w-8 text-right text-slate-400">85%</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs sm:text-sm">
+            <span class="w-12 font-semibold text-slate-700">4 Stars</span>
+            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-amber-400 h-full w-[15%] rounded-full"></div>
+            </div>
+            <span class="w-8 text-right text-slate-400">15%</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs sm:text-sm">
+            <span class="w-12 font-semibold text-slate-700">3 Stars</span>
+            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-amber-400 h-full w-[0%] rounded-full"></div>
+            </div>
+            <span class="w-8 text-right text-slate-400">0%</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs sm:text-sm">
+            <span class="w-12 font-semibold text-slate-700">2 Stars</span>
+            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-amber-400 h-full w-[0%] rounded-full"></div>
+            </div>
+            <span class="w-8 text-right text-slate-400">0%</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs sm:text-sm">
+            <span class="w-12 font-semibold text-slate-700">1 Star</span>
+            <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="bg-amber-400 h-full w-[0%] rounded-full"></div>
+            </div>
+            <span class="w-8 text-right text-slate-400">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Feed & Interactive Form -->
+      <div class="lg:col-span-8 space-y-8">
+        
+        <!-- Interactive Submit Form -->
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-amber-200/80 shadow-sm">
+          <h3 class="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2">
+            <i class="fa-solid fa-pen-to-square text-kambo-600"></i> Write a Review for Kambolojo
+          </h3>
+
+          <form id="review-form" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Your Name</label>
+                <input 
+                  type="text" 
+                  id="rev-name" 
+                  required 
+                  placeholder="e.g. Abebe K." 
+                  class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-kambo-600 focus:border-transparent outline-none text-sm"
+                >
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Your Rating</label>
+                <div class="flex items-center gap-1.5 text-2xl text-amber-400 pt-1" id="star-rating-selector">
+                  <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" data-rating="1"></i>
+                  <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" data-rating="2"></i>
+                  <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" data-rating="3"></i>
+                  <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" data-rating="4"></i>
+                  <i class="fa-solid fa-star cursor-pointer hover:scale-110 transition" data-rating="5"></i>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Your Review</label>
+              <textarea 
+                id="rev-comment" 
+                rows="3" 
+                required 
+                placeholder="Tell us about your experience with our pizza, burgers, or fresh juices..." 
+                class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:ring-2 focus:ring-kambo-600 focus:border-transparent outline-none text-sm"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="bg-kambo-600 hover:bg-kambo-700 text-white font-bold px-6 py-3 rounded-xl transition shadow-md text-sm flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Submit Review
+            </button>
+          </form>
+        </div>
+
+        <!-- Live Reviews List -->
+        <div id="reviews-container" class="space-y-4">
+          <!-- Dynamic reviews rendered here -->
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-kambo-600 text-white flex items-center justify-center font-bold text-xl">
+          K
+        </div>
+        <div>
+          <span class="text-xl font-black text-white tracking-tight">KAMBOLOJO RESTAURANT</span>
+          <p class="text-xs text-slate-400">Bole Arabsa & Cherkos Square • Addis Ababa, Ethiopia</p>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 text-center md:text-right space-y-1">
+        <p>Phone: <a href="tel:0919902808" class="text-amber-400 font-bold hover:underline">0919902808</a> • Open Daily until 10:30 PM</p>
+        <p>&copy; 2026 Kambolojo Restaurant. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white px-5 py-3 rounded-2xl shadow-2xl z-50 flex items-center gap-3 border border-slate-700 transform translate-y-24 opacity-0 transition duration-300 pointer-events-none">
+    <i class="fa-solid fa-circle-check text-kambo-500 text-xl"></i>
+    <span id="toast-message" class="text-sm font-semibold">Action completed successfully!</span>
+  </div>
+
+  <script>
+    const menuItems = [
+      // PIZZAS
+      {
+        id: 1,
+        title: "Kambolojo Special Pizza",
+        category: "pizza",
+        badge: "Chef Special",
+        description: "Signature crust loaded with beef, chicken, mozzarella, mushrooms, bell peppers, olives & secret garlic butter sauce.",
+        image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 2,
+        title: "Beef Margherita Pizza",
+        category: "pizza",
+        badge: "Popular",
+        description: "Seasoned local beef mince, fresh tomato sauce, double layer mozzarella cheese and organic oregano.",
+        image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 3,
+        title: "Chicken Supreme Pizza",
+        category: "pizza",
+        badge: "Customer Favorite",
+        description: "Tender grilled chicken chunks, sweet corn, green peppers, onions, melted cheese and herbs.",
+        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 4,
+        title: "Spicy Meat Feast Pizza",
+        category: "pizza",
+        badge: "Spicy",
+        description: "Spicy minced beef, sausage slices, jalapenos, chili oil, mozzarella and fresh tomatoes.",
+        image: "https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 5,
+        title: "Mushroom & Garlic Pizza",
+        category: "pizza",
+        badge: "Vegetarian",
+        description: "Sautéed fresh mushrooms, roasted garlic cloves, creamy mozzarella and fresh parsley.",
+        image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 6,
+        title: "Tuna & Veggie Pizza",
+        category: "pizza",
+        badge: "Seafood",
+        description: "Flaked tuna fish, sliced red onions, green peppers, sweet corn and mozzarella cheese.",
+        image: "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 7,
+        title: "Four Cheese Pizza",
+        category: "pizza",
+        badge: "Rich & Cheesy",
+        description: "Blend of premium mozzarella, cheddar, gouda and white cottage cheese over classic tomato sauce.",
+        image: "https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?auto=format&fit=crop&w=600&q=80"
+      },
+
+      // BURGERS & SANDWICHES
+      {
+        id: 8,
+        title: "Kambolojo Special Cheese Burger",
+        category: "burgers",
+        badge: "Signature",
+        description: "Double grilled beef patty, melted cheese, caramelized onions, crisp lettuce, tomato & special house sauce.",
+        image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 9,
+        title: "Double Beef Burger",
+        category: "burgers",
+        badge: "Hearty",
+        description: "Two thick seasoned beef patties, double cheddar cheese, pickles and classic burger dressing.",
+        image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 10,
+        title: "Crispy Chicken Burger",
+        category: "burgers",
+        badge: "Crispy",
+        description: "Golden fried seasoned chicken breast fillet, garlic mayo spread, lettuce & pickles in a toasted bun.",
+        image: "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 11,
+        title: "Classic Club Sandwich",
+        category: "burgers",
+        badge: "Served with Fries",
+        description: "Triple-layer toasted bread stacked with chicken, fried egg, cheese, tomato, lettuce & mayo.",
+        image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 12,
+        title: "Tuna Melt Toast",
+        category: "burgers",
+        badge: "Toasted",
+        description: "Flaked tuna blend with sweet corn, mayo and melted cheese grilled between crisp white toast.",
+        image: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 13,
+        title: "Steak & Cheese Sandwich",
+        category: "burgers",
+        badge: "Hot Sandwich",
+        description: "Sliced tender beef steak sautéed with onions, bell peppers and melted cheese in a soft baguette.",
+        image: "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 14,
+        title: "Egg & Avocado Sandwich",
+        category: "burgers",
+        badge: "Fresh",
+        description: "Sliced boiled egg, fresh ripe avocado, sliced tomato and light herb dressing on artisan bread.",
+        image: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80"
+      },
+
+      // MAIN DISHES & CLASSICS
+      {
+        id: 15,
+        title: "Roasted Chicken with Fries",
+        category: "mains",
+        badge: "Full Meal",
+        description: "Half oven-roasted marinated chicken served with golden french fries and side salad.",
+        image: "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 16,
+        title: "Grilled Fish Cutlet",
+        category: "mains",
+        badge: "Seafood",
+        description: "Freshly seasoned Lake fish fillet grilled with lemon garlic herb sauce and served with rice or fries.",
+        image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 17,
+        title: "Spaghetti Bolognese",
+        category: "mains",
+        badge: "Pasta",
+        description: "Al dente Italian spaghetti topped with slow-cooked minced beef tomato ragù and parmesan cheese.",
+        image: "https://images.unsplash.com/photo-1621996346565-e3d5d6281270?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 18,
+        title: "Creamy Carbonara Pasta",
+        category: "mains",
+        badge: "Creamy",
+        description: "Penne or spaghetti tossed in rich garlic cream sauce with meat bites, black pepper & cheese.",
+        image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 19,
+        title: "Penne Arrabbiata",
+        category: "mains",
+        badge: "Spicy Pasta",
+        description: "Penne pasta coated in a fiery garlic chili tomato sauce with fresh basil leaves.",
+        image: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 20,
+        title: "Seasoned French Fries",
+        category: "mains",
+        badge: "Side Dish",
+        description: "Crispy golden potato fries lightly tossed in house seasoning blend, served with ketchup & dip.",
+        image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 21,
+        title: "Fried Chicken Wings (8 Pcs)",
+        category: "mains",
+        badge: "Crispy Wings",
+        description: "8 pieces of crunchy fried chicken wings coated in sweet chili or barbecue glaze.",
+        image: "https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=600&q=80"
+      },
+
+      // FRESH JUICES & SPRIS
+      {
+        id: 22,
+        title: "Layered Ethiopian Spris Juice",
+        category: "juices",
+        badge: "Ethiopian Classic",
+        description: "Traditional layered thick natural juice made with fresh avocado, mango, and papaya puree.",
+        image: "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 23,
+        title: "Pure Mango Juice",
+        category: "juices",
+        badge: "100% Natural",
+        description: "Thick and sweet pure blended ripe mangoes served ice cold without artificial additives.",
+        image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 24,
+        title: "Fresh Avocado Juice",
+        category: "juices",
+        badge: "Creamy",
+        description: "Smooth creamy avocado juice served with a splash of fresh lemon or vimto drizzle upon request.",
+        image: "https://images.unsplash.com/photo-1528498033373-3c6c08e93d79?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 25,
+        title: "Fresh Papaya Juice",
+        category: "juices",
+        badge: "Refreshing",
+        description: "Naturally sweet freshly blended papaya juice loaded with vitamins.",
+        image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 26,
+        title: "Fresh Orange Juice",
+        category: "juices",
+        badge: "Fresh Squeezed",
+        description: "100% pure squeezed citrus orange juice served over ice cubes.",
+        image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 27,
+        title: "Strawberry Smoothie",
+        category: "juices",
+        badge: "Chilled",
+        description: "Blended fresh strawberries with sweet yogurt or fruit juice base.",
+        image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=600&q=80"
+      },
+
+      // SOFT DRINKS & WATER
+      {
+        id: 28,
+        title: "Coca-Cola (500ml Chilled)",
+        category: "softdrinks",
+        badge: "Cold Drink",
+        description: "Ice cold original classic Coca-Cola glass or PET bottle.",
+        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 29,
+        title: "Sprite (500ml Chilled)",
+        category: "softdrinks",
+        badge: "Cold Drink",
+        description: "Refreshing lemon-lime carbonated soda served chilled.",
+        image: "https://images.unsplash.com/photo-1625772299848-391b6a87d7b3?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 30,
+        title: "Pepsi (500ml Chilled)",
+        category: "softdrinks",
+        badge: "Cold Drink",
+        description: "Classic chilled cola soft drink.",
+        image: "https://images.unsplash.com/photo-1553456558-aff63285bdd1?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 31,
+        title: "Mirinda Orange",
+        category: "softdrinks",
+        badge: "Fruity Soda",
+        description: "Sweet, fizzy orange flavored soft drink.",
+        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 32,
+        title: "Fanta Orange",
+        category: "softdrinks",
+        badge: "Fruity Soda",
+        description: "Bright citrus orange carbonated soft drink.",
+        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 33,
+        title: "Fanta Ananas (Pineapple)",
+        category: "softdrinks",
+        badge: "Ethiopian Favorite",
+        description: "Popular tropical pineapple-flavored Fanta soft drink served ice cold.",
+        image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 34,
+        title: "Ambo Sparkling Mineral Water",
+        category: "softdrinks",
+        badge: "Ethiopian Legend",
+        description: "Famous natural sparkling mineral water bottle from Ambo springs.",
+        image: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 35,
+        title: "Highland Bottled Mineral Water",
+        category: "softdrinks",
+        badge: "Pure Water",
+        description: "Clean, crisp purified still drinking mineral water bottle.",
+        image: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 36,
+        title: "Royal Tonic Water",
+        category: "softdrinks",
+        badge: "Chilled",
+        description: "Fizzy tonic water with a subtle touch of citrus.",
+        image: "https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+
+    let reviewsList = [
+      {
+        name: "Abebe K.",
+        rating: 5,
+        date: "1 day ago",
+        comment: "The Kambolojo Special Pizza at Bole Arabsa branch was incredible! Dough is super fresh and the meat was perfectly seasoned."
+      },
+      {
+        name: "Selamawit T.",
+        rating: 5,
+        date: "3 days ago",
+        comment: "Best Spris juice in Cherkos Square area! Also love that they stay open until 10:30 PM for late dinner."
+      },
+      {
+        name: "Dawit M.",
+        rating: 5,
+        date: "1 week ago",
+        comment: "Double Beef Burger is super juicy! Paired it with cold Fanta Ananas. Quick delivery to my office."
+      },
+      {
+        name: "Bethlehem G.",
+        rating: 4,
+        date: "2 weeks ago",
+        comment: "Great customer service when calling 0919902808. Food arrived hot and neatly packaged."
+      },
+      {
+        name: "Yonas B.",
+        rating: 5,
+        date: "3 weeks ago",
+        comment: "Loved the Roasted Chicken with fries and cold Ambo water. My favorite spot in Addis!"
+      }
+    ];
+
+    let currentCategory = 'all';
+    let selectedFormRating = 5;
+
+    function renderMenu() {
+      const grid = document.getElementById('menu-grid');
+      const noResults = document.getElementById('no-results');
+      const searchTerm = document.getElementById('search-input').value.toLowerCase().trim();
+
+      const filtered = menuItems.filter(item => {
+        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchesSearch = item.title.toLowerCase().includes(searchTerm) || 
+                              item.description.toLowerCase().includes(searchTerm);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      grid.innerHTML = filtered.map(item => `
+        <div class="bg-white rounded-3xl overflow-hidden border border-amber-200/80 shadow-sm hover:shadow-xl transition duration-300 flex flex-col group">
+          
+          <!-- IMAGE BEFORE ITEM NAME (CRITICAL REQUIREMENT) -->
+          <div class="relative h-52 overflow-hidden bg-slate-100">
+            <img 
+              src="${item.image}" 
+              alt="${item.title}" 
+              class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              onerror="this.src='https://placehold.co/600x400/ea580c/ffffff?text=${encodeURIComponent(item.title)}'"
+            >
+            <span class="absolute top-3 left-3 bg-kambo-600 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md">
+              ${item.badge}
+            </span>
+          </div>
+
+          <!-- ITEM TITLE & DETAILS (NO PRICE LISTED) -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-kambo-600 transition">
+                ${item.title}
+              </h3>
+              <p class="text-slate-500 text-sm mt-2 leading-relaxed">
+                ${item.description}
+              </p>
+            </div>
+
+            <!-- ORDER BUTTON (CALL / WHATSAPP DIRECTLY) -->
+            <div class="mt-6 pt-4 border-t border-amber-100 flex items-center justify-between gap-2">
+              <span class="text-xs font-semibold text-kambo-600 bg-amber-50 px-2.5 py-1 rounded-md">
+                Freshly Prepared
+              </span>
+              <a href="tel:0919902808" class="bg-kambo-600 hover:bg-kambo-700 text-white px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+                <i class="fa-solid fa-phone"></i> Order Now
+              </a>
+            </div>
+          </div>
+
+        </div>
+      `).join('');
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-kambo-600', 'text-white', 'shadow-md');
+        btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-amber-200');
+      });
+
+      event.currentTarget.classList.remove('bg-white', 'text-slate-700', 'border', 'border-amber-200');
+      event.currentTarget.classList.add('bg-kambo-600', 'text-white', 'shadow-md');
+
+      renderMenu();
+    }
+
+    function renderReviews() {
+      const container = document.getElementById('reviews-container');
+      const totalCount = document.getElementById('total-reviews-count');
+      
+      totalCount.textContent = reviewsList.length;
+
+      container.innerHTML = reviewsList.map(rev => {
+        let starsHtml = '';
+        for (let i = 1; i <= 5; i++) {
+          if (i <= rev.rating) {
+            starsHtml += '<i class="fa-solid fa-star text-amber-400"></i>';
+          } else {
+            starsHtml += '<i class="fa-regular fa-star text-slate-300"></i>';
+          }
+        }
+
+        return `
+          <div class="bg-white p-5 rounded-2xl border border-amber-200/80 shadow-sm space-y-2">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-amber-100 text-kambo-700 font-bold flex items-center justify-center text-sm">
+                  ${rev.name.charAt(0)}
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-sm">${rev.name}</h4>
+                  <span class="text-xs text-slate-400">${rev.date}</span>
+                </div>
+              </div>
+              <div class="flex text-xs gap-1">
+                ${starsHtml}
+              </div>
+            </div>
+            <p class="text-slate-600 text-sm pt-1">${rev.comment}</p>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // Star Selector Event Listener
+    document.querySelectorAll('#star-rating-selector i').forEach(star => {
+      star.addEventListener('click', function() {
+        selectedFormRating = parseInt(this.getAttribute('data-rating'));
+        
+        document.querySelectorAll('#star-rating-selector i').forEach((s, idx) => {
+          if (idx < selectedFormRating) {
+            s.classList.remove('fa-regular', 'text-slate-300');
+            s.classList.add('fa-solid', 'text-amber-400');
+          } else {
+            s.classList.remove('fa-solid', 'text-amber-400');
+            s.classList.add('fa-regular', 'text-slate-300');
+          }
+        });
+      });
+    });
+
+    // Handle Form Submit
+    document.getElementById('review-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('rev-name').value.trim();
+      const comment = document.getElementById('rev-comment').value.trim();
+
+      if (!name || !comment) return;
+
+      reviewsList.unshift({
+        name: name,
+        rating: selectedFormRating,
+        date: "Just now",
+        comment: comment
+      });
+
+      renderReviews();
+      showToast("Thank you! Your review has been added.");
+
+      this.reset();
+      selectedFormRating = 5;
+      document.querySelectorAll('#star-rating-selector i').forEach(s => {
+        s.classList.remove('fa-regular', 'text-slate-300');
+        s.classList.add('fa-solid', 'text-amber-400');
+      });
+    });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+
+    // Search Input Listener
+    document.getElementById('search-input').addEventListener('input', renderMenu);
+
+    // Initial Load
+    window.addEventListener('DOMContentLoaded', () => {
+      renderMenu();
+      renderReviews();
+    });
+  </script>
+</body>
+</html>
